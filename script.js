@@ -1,6 +1,6 @@
 (function(){
 /* ====== SETTINGS ====== */
-var FORM_KEY='PASTE_WEB3FORMS_ACCESS_KEY_HERE'; /* free key from web3forms.com (email notification) */
+var FORM_KEY='b9e02b30-b9eb-4c39-accb-f196cd7f5a85'; /* free key from web3forms.com (email notification) */
 var WA='917206718075',DELAY=10000;             /* WhatsApp number, popup delay in ms */
 var POLICY='Privacy Policy dated 1 November 2026';
 /* ====================== */

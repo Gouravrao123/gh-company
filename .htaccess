@@ -15,9 +15,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 # 2) /about/index.html -> /about/ (avoids duplicate URLs)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/(.*/)?index\.html[\s?] [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
-# 3) www / non-www: choose ONE and uncomment (replace YOURDOMAIN.com)
-# RewriteCond %{HTTP_HOST} ^www\.YOURDOMAIN\.com$ [NC]
-# RewriteRule ^(.*)$ https://YOURDOMAIN.com/$1 [R=301,L]
+# 3) www -> non-www (canonical domain is https://ghcompany.in)
+RewriteCond %{HTTP_HOST} ^www\.ghcompany\.in$ [NC]
+RewriteRule ^(.*)$ https://ghcompany.in/$1 [R=301,L]
 <IfModule mod_headers.c>
 Header always set Strict-Transport-Security "max-age=31536000"
 Header always set X-Content-Type-Options "nosniff"
