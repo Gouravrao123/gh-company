@@ -1,7 +1,7 @@
 (function(){
 /* ====== SETTINGS ====== */
 var FORM_KEY='b9e02b30-b9eb-4c39-accb-f196cd7f5a85'; /* free key from web3forms.com (email notification) */
-var WA='917206718075',DELAY=10000;             /* WhatsApp number, popup delay in ms */
+var WA='917206718075',SCROLL=0.5;             /* WhatsApp number, popup shows after this share of the page is scrolled */
 var POLICY='Privacy Policy dated 1 November 2026';
 /* ====================== */
 var B=(document.currentScript&&document.currentScript.src||'').replace(/script\.js.*$/,'');
@@ -70,5 +70,5 @@ if(!PH.test(clean($('amp').value))){s.textContent='Please enter a valid phone nu
 if(throttled()){s.textContent='Please wait a few seconds and try again.';return}
 s.textContent='';var g=$('amg');g.disabled=true;
 lead({name:$('amn').value,business:$('amb').value,phone:$('amp').value,email:$('ame').value,service:$('ams').value,message:$('amm').value},function(h){g.disabled=false;$('amf').hidden=true;$('amokp').textContent=OKMSG[h];$('amok').hidden=false})});
-if(!st('ghAudit'))setTimeout(show,DELAY);
+if(!st('ghAudit')){var sc=function(){var d=document.documentElement,h=d.scrollHeight-window.innerHeight,y=window.pageYOffset||d.scrollTop||0;if(h>0&&y/h>=SCROLL){window.removeEventListener('scroll',sc);show()}};window.addEventListener('scroll',sc,{passive:true})}
 })();
