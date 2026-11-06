@@ -1,0 +1,1 @@
+OFFLINE VERSION: double-click index.html. Local preview only. Upload the normal gh-company folder to your host.
