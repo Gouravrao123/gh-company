@@ -262,3 +262,246 @@ h1,h2,h3,p,li,summary,td,th{overflow-wrap:break-word}
 .bio{margin-top:44px;padding:20px 22px;border:1px solid var(--line);border-radius:14px;max-width:70ch}.bio .bio-h{display:block;margin-bottom:6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}.bio p{margin:0;color:var(--mu);font-size:15px;line-height:1.6}.bio a{color:var(--ac);text-decoration:underline}
 
 /* done by me */
+
+/* =========================================================
+   GH COMPANY STATS SECTION — RESPONSIVE REDESIGN
+   Desktop: 2x2 Grid | Mobile: Single Column
+   ========================================================= */
+
+.stats {
+  position: relative;
+  padding: 34px 0 46px;
+  isolation: isolate;
+}
+
+.stats .wrap {
+  max-width: 1160px;
+}
+
+.stats .statgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.stats .statgrid > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(22px, 3vw, 32px);
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid rgba(255, 181, 27, .2);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(255, 181, 27, .09), transparent 48%),
+    linear-gradient(145deg, #222329 0%, #1c1d22 72%);
+  box-shadow:
+    9px 9px 22px rgba(8, 8, 11, .62),
+    -7px -7px 20px rgba(255, 255, 255, .035),
+    0 0 24px -10px rgba(255, 181, 27, .28);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.stats .statgrid > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 54px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: var(--ac);
+  box-shadow: 0 0 14px rgba(255, 181, 27, .6);
+}
+
+.stats .statgrid > div:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 181, 27, .48);
+  box-shadow:
+    10px 12px 26px rgba(8, 8, 11, .66),
+    -7px -7px 20px rgba(255, 255, 255, .04),
+    0 0 30px -8px rgba(255, 181, 27, .34);
+}
+
+/* Numbers */
+
+.stats .statgrid b {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  margin: 0 0 12px;
+  color: var(--ac);
+  font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.035em;
+  text-shadow: 0 0 18px rgba(255, 181, 27, .32);
+}
+
+/* Content */
+
+.stats .statgrid span {
+  display: block;
+  width: 100%;
+  margin: 0;
+  color: var(--mu);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.stats .statgrid h3 {
+  max-width: 29ch;
+  margin: 0 0 14px;
+  color: var(--tx);
+  font-size: clamp(19px, 2vw, 23px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  text-align: left;
+}
+
+.stats .statgrid p {
+  margin: 0 0 12px;
+  color: var(--mu);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+/* Lists */
+
+.stats .statgrid ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px 18px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats .statgrid li {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding-left: 18px;
+  color: #c7c9d0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.stats .statgrid li::before {
+  content: "";
+  position: absolute;
+  top: .62em;
+  left: 1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ac);
+  box-shadow: 0 0 9px rgba(255, 181, 27, .42);
+}
+
+.stats .statgrid > div:nth-child(3) p,
+.stats .statgrid > div:nth-child(4) p {
+  max-width: 52ch;
+}
+
+.stats .statgrid > div:nth-child(3) span,
+.stats .statgrid > div:nth-child(4) span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stats .statgrid > div:nth-child(3) h3,
+.stats .statgrid > div:nth-child(4) h3 {
+  max-width: 32ch;
+}
+
+/* Tablet */
+
+@media (max-width: 760px) {
+  .stats {
+    padding: 26px 0 38px;
+  }
+
+  .stats .statgrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stats .statgrid > div {
+    padding: 24px 22px;
+    border-radius: 19px;
+  }
+
+  .stats .statgrid b {
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+
+  .stats .statgrid h3 {
+    max-width: 34ch;
+    font-size: 21px;
+  }
+
+  .stats .statgrid span {
+    font-size: 15px;
+  }
+
+  .stats .statgrid ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 16px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 420px) {
+  .stats .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .stats .statgrid {
+    gap: 14px;
+  }
+
+  .stats .statgrid > div {
+    padding: 22px 18px;
+  }
+
+  .stats .statgrid h3 {
+    font-size: 19px;
+  }
+
+  .stats .statgrid ul {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stats .statgrid li {
+    font-size: 14.5px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .stats .statgrid > div {
+    transition: none;
+  }
+
+  .stats .statgrid > div:hover {
+    transform: none;
+  }
+}
