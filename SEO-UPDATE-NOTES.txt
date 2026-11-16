@@ -1,0 +1,40 @@
+GH COMPANY WEBSITE UPDATE — SEO REMEDIATION PASS 2
+
+Source: gh-company-main.zip supplied in this conversation.
+Date: 16 November 2026.
+
+Changes made in this pass
+1. Added a visitor-facing HTML sitemap at /sitemap.html, grouped into main pages, services, company information and blog guides.
+2. Added a visible HTML Sitemap link to the footer of every existing indexable page.
+3. Regenerated sitemap.xml from each page's canonical URL, including the new HTML sitemap. The lastmod dates reflect this package's edits; submit the updated sitemap after deployment.
+4. Improved contextual internal links in the Digital Marketing page introduction and Pricing page introduction, linking to relevant service pages.
+5. Shortened 24 meta descriptions that exceeded 160 characters while preserving their page topics and intent. All page descriptions remain unique.
+6. Changed four homepage statistics/feature-card labels from H3 headings to styled non-heading text. These cards are not document sections; this removes the H1-to-H3 heading-level skip without changing their appearance.
+
+Verified from the supplied files
+- 108 HTML documents including the 404 page; 107 indexable pages plus the new HTML sitemap after this pass.
+- Every indexable page has a unique title, meta description and canonical URL, and exactly one H1.
+- Structured data JSON-LD is present across the site; the supplied archive included 92 Article schemas, 105 BreadcrumbList schemas, 102 FAQPage schemas and the Organization/WebSite markup.
+- robots.txt and XML sitemap are present; XML sitemap is regenerated and includes the HTML sitemap.
+- All 107 existing indexable pages were in the original XML sitemap.
+- No missing img alt attributes were found. Empty alt attributes are used for the repeated secondary logo image, which is decorative; primary logo images have descriptive alt text.
+- No broken local relative links were found in the HTML files. All indexable pages have at least one internal inbound link.
+- The current Digital Marketing page has about 1,900 words and the Pricing page about 1,580 words in the supplied archive; the report's earlier approximate counts (250 and 1,500) are not a reason to add filler.
+- The report's pagination rel=next/prev suggestion was not implemented: these are not a current Google indexing requirement.
+
+Still not verified / requires access outside this ZIP
+- The changes are NOT deployed. Upload the contents of this package to the correct hosting environment first.
+- Live HTTP status codes, redirects, canonical responses, sitemap fetchability and robots access must be checked after deployment.
+- PageSpeed Insights / Core Web Vitals and real-device responsive behavior have not been measured in this offline archive review.
+- Contact form delivery, WhatsApp/call actions and navigation must be tested on the live domain.
+- Google Search Console indexing, crawl errors, query performance and backlink profile require the owner's Search Console / analytics or SEO-tool access. No ranking, traffic or backlink improvement is claimed.
+- Structured data was checked for valid JSON syntax and presence in source, not certified by Google's Rich Results Test.
+
+Deployment note
+Upload the contents of the gh-company-main folder, preserving the folder structure and root-level files. After deployment, open https://ghcompany.in/sitemap.xml and https://ghcompany.in/sitemap.html, then submit the XML sitemap in Google Search Console.
+
+Search Console export supplied separately (filter says Last 28 days)
+- The included Chart.csv contains rows for 29 October–14 November 2026 only: 19 clicks and 303 impressions across those rows (6.27% CTR). The chart rows do not cover all 28 calendar days despite the filter label, so do not treat this as a complete 28-day total.
+- The homepage recorded 15 clicks / 64 impressions in Pages.csv; the Google Ads basics article recorded 2 clicks / 70 impressions. Many other URLs have very small impression counts, so ranking conclusions are premature.
+- Devices.csv shows 16 clicks / 97 impressions on mobile and 3 clicks / 206 impressions on desktop. This is a small sample and is not a mobile-usability test; it does not establish that desktop or mobile performance is technically broken.
+- Search Console also lists both www and non-www URL variants and an /about/index.html variant in its historical page rows. The archive contains redirect rules in .htaccess and a trailing-slash Vercel configuration, but the actual live redirect behavior could not be tested from this environment. Confirm the active hosting platform and verify these redirects after deployment.
