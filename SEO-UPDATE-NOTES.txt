@@ -38,3 +38,14 @@ Search Console export supplied separately (filter says Last 28 days)
 - The homepage recorded 15 clicks / 64 impressions in Pages.csv; the Google Ads basics article recorded 2 clicks / 70 impressions. Many other URLs have very small impression counts, so ranking conclusions are premature.
 - Devices.csv shows 16 clicks / 97 impressions on mobile and 3 clicks / 206 impressions on desktop. This is a small sample and is not a mobile-usability test; it does not establish that desktop or mobile performance is technically broken.
 - Search Console also lists both www and non-www URL variants and an /about/index.html variant in its historical page rows. The archive contains redirect rules in .htaccess and a trailing-slash Vercel configuration, but the actual live redirect behavior could not be tested from this environment. Confirm the active hosting platform and verify these redirects after deployment.
+
+
+PASS 3 - OUR WORK (/portfolio/) SEO UPDATE, 17 November 2026
+- New title (53 chars) and meta description (under 160 chars); Open Graph and Twitter tags rewritten (old tags still described concept projects). New 1200x630 social image: /portfolio/og-our-work.jpg.
+- H1 and intro now describe the real content (website and landing page samples in Rewari) and link to Website Development and Meta Ads pages.
+- JSON-LD rebuilt as one @graph: CollectionPage, BreadcrumbList, ItemList (4 samples as CreativeWork with images) and FAQPage. The 4 FAQs are visible on the page and match the schema.
+- Added Related Services links, preloaded the first image, first two images load eagerly (above the fold), the rest lazy.
+- sitemap.xml: lastmod updated and image entries added for the page; sitemap.html and llms.txt wording updated.
+- New inbound contextual links from the homepage, Website Development and Meta Ads pages.
+- The 4 sample pages stay noindex,follow on purpose: they contain placeholder names and numbers and would be thin or duplicate content. They are not in the sitemap. The ItemList items therefore carry no url.
+- Not verified from this archive: live indexing, Rich Results Test, PageSpeed, rankings. No ranking or traffic improvement is claimed. After deployment submit sitemap.xml in Search Console and request indexing for /portfolio/.

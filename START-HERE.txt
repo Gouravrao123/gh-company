@@ -1,1 +1,5 @@
 OFFLINE VERSION: double-click index.html. Local preview only. Upload the normal gh-company folder to your host.
+
+
+UPDATE: Our Work (/portfolio/) now includes 4 live sample sites from weblive (see /portfolio/*/). Sample pages are noindex.
+Samples in /portfolio/* use GH Company contact details and the same enquiry system (Web3Forms + WhatsApp fallback, shared file portfolio/gh-lead.js).

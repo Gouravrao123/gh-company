@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ghcompany.in/about/</loc>
     <lastmod>2026-11-16</lastmod>
@@ -502,8 +502,13 @@
   </url>
   <url>
     <loc>https://ghcompany.in/portfolio/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://ghcompany.in/portfolio/img/wedding-venue-website-rewari.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ghcompany.in/portfolio/img/resort-hotel-website-rewari.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ghcompany.in/portfolio/img/pg-hostel-website-rewari.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ghcompany.in/portfolio/img/meta-ads-landing-page.jpg</image:loc></image:image>
+    <image:image><image:loc>https://ghcompany.in/portfolio/og-our-work.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://ghcompany.in/privacy-policy/</loc>
